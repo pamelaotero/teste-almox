@@ -102,7 +102,6 @@ tr:hover td { background: #fafbfd; }
 /* =========================================================================
    LAYOUT WEB (desktop)
    ========================================================================= */
-.web { }
 .web .shell { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
 .web .sidebar { background: var(--primary); color: #cdd7ea; padding: 18px 12px; }
 .web .sidebar .brand { color: #fff; font-weight: 700; font-size: 18px; padding: 6px 10px 16px; }
