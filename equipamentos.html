@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Equipamentos / Estoque (RF04)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="equipamentos.html" class="active">📦 Equipamentos</a>
+    <a href="solicitar.html">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html">📋 Minhas solicitações</a>
+    <a href="devolucoes.html">↩️ Devoluções</a>
+    <a href="historico.html">🕑 Histórico</a>
+    <a href="notificacoes.html">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html">✅ Aprovações</a>
+    <a href="categorias-times.html">🗂️ Categorias e times</a>
+    <a href="usuarios.html">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar por nome, código ou categoria...">
+      <div class="row center"><a href="notificacoes.html" style="font-size:18px">🔔</a><span class="badge info">Administrador</span><div class="avatar">PO</div></div>
+    </header>
+    <div class="content">
+      <div class="pagehead row spread">
+        <div><h1>Equipamentos e Kits</h1><p>Consulta de estoque, disponibilidade e quantidade</p></div>
+        <a href="equipamento-form.html" class="btn">➕ Novo equipamento</a>
+      </div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 03 · Catálogo e consulta de estoque</a></p>
+
+      <div class="card" style="padding:14px">
+        <div class="row wrap center">
+          <input class="grow" placeholder="🔎 Pesquisar...">
+          <select style="width:170px"><option>Todas as categorias</option><option>Ferramentas</option><option>Andaimes</option><option>EPIs</option></select>
+          <select style="width:170px"><option>Tipo: todos</option><option>Equipamento</option><option>Kit</option></select>
+          <select style="width:170px"><option>Status: todos</option><option>Disponível</option><option>Indisponível</option></select>
+        </div>
+      </div>
+
+      <div class="card mt16" style="padding:0">
+        <table>
+          <thead><tr><th>Item</th><th>Categoria</th><th>Tipo</th><th>Qtd. disponível</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><strong>Furadeira de impacto</strong><div class="small muted">EQ-1042</div></td><td>Ferramentas</td><td>Equipamento</td><td>8</td><td><span class="badge ok">Disponível</span></td><td><a href="solicitar.html" class="btn sm secondary">Solicitar</a></td></tr>
+            <tr><td><strong>Kit Elétrica Básico</strong><div class="small muted">KT-0007</div></td><td>Ferramentas</td><td>Kit</td><td>3</td><td><span class="badge ok">Disponível</span></td><td><a href="solicitar.html" class="btn sm secondary">Solicitar</a></td></tr>
+            <tr><td><strong>Andaime tubular 1,5m</strong><div class="small muted">EQ-2210</div></td><td>Andaimes</td><td>Equipamento</td><td>0</td><td><span class="badge danger">Indisponível</span></td><td><a href="solicitar.html" class="btn sm ghost">Entrar na fila</a></td></tr>
+            <tr><td><strong>Capacete classe B</strong><div class="small muted">EQ-3301</div></td><td>EPIs</td><td>Equipamento</td><td>25</td><td><span class="badge ok">Disponível</span></td><td><a href="solicitar.html" class="btn sm secondary">Solicitar</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row spread mt16 small muted"><span>Mostrando 4 de 312 itens</span><span>◀ 1 2 3 ... 78 ▶</span></div>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF04 · Consulta de estoque, listagem e pesquisa</div>
+</body>
+</html>

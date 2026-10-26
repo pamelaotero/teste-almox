@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Aprovações (RF07)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="equipamentos.html">📦 Equipamentos</a>
+    <a href="solicitar.html">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html">📋 Minhas solicitações</a>
+    <a href="devolucoes.html">↩️ Devoluções</a>
+    <a href="historico.html">🕑 Histórico</a>
+    <a href="notificacoes.html">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html" class="active">✅ Aprovações</a>
+    <a href="categorias-times.html">🗂️ Categorias e times</a>
+    <a href="usuarios.html">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar...">
+      <div class="row center"><a href="notificacoes.html" style="font-size:18px">🔔</a><span class="badge info">Aprovador · Almoxarifado Central</span><div class="avatar">PO</div></div>
+    </header>
+    <div class="content">
+      <div class="pagehead"><h1>Aprovações pendentes</h1><p>Solicitações roteadas para os times aos quais você pertence (RF07)</p></div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 05 · Aprovação ou Recusa por time aprovador</a></p>
+
+      <div class="card" style="padding:0">
+        <table>
+          <thead><tr><th>Solicitante</th><th>Item</th><th>Qtd</th><th>Categoria</th><th>Enviada</th><th>Ações</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>João Pereira</strong><div class="small muted">Engenharia de Obras</div></td>
+              <td>Furadeira de impacto</td><td>2</td><td>Ferramentas</td><td>há 2h</td>
+              <td class="row"><a href="#" class="btn sm">Aprovar</a><a href="#" class="btn sm danger">Recusar</a></td>
+            </tr>
+            <tr>
+              <td><strong>Marina Dias</strong><div class="small muted">Engenharia de Obras</div></td>
+              <td>Kit Elétrica Básico</td><td>1</td><td>Ferramentas</td><td>há 5h</td>
+              <td class="row"><a href="#" class="btn sm">Aprovar</a><a href="#" class="btn sm danger">Recusar</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt16" style="max-width:520px">
+        <h3>Recusar solicitação</h3>
+        <p class="small muted">Informe o motivo — ele será enviado ao funcionário (RF12).</p>
+        <textarea rows="3" placeholder="Ex.: item reservado para manutenção programada"></textarea>
+        <div class="row spread mt16"><a href="#" class="btn ghost">Cancelar</a><a href="#" class="btn danger">Confirmar recusa</a></div>
+      </div>
+      <p class="small muted mt16">Você só vê e decide solicitações das categorias/times aos quais pertence (RNF04).</p>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF07 · Aprovação/recusa por time aprovador</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Usuários (RF01)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="equipamentos.html">📦 Equipamentos</a>
+    <a href="solicitar.html">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html">📋 Minhas solicitações</a>
+    <a href="devolucoes.html">↩️ Devoluções</a>
+    <a href="historico.html">🕑 Histórico</a>
+    <a href="notificacoes.html">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html">✅ Aprovações</a>
+    <a href="categorias-times.html">🗂️ Categorias e times</a>
+    <a href="usuarios.html" class="active">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar...">
+      <div class="row center"><a href="notificacoes.html" style="font-size:18px">🔔</a><span class="badge info">Administrador</span><div class="avatar">PO</div></div>
+    </header>
+    <div class="content">
+      <div class="pagehead row spread">
+        <div><h1>Usuários</h1><p>Gestão de usuários, perfis e vínculo ao time aprovador (RF01)</p></div>
+        <a href="#" class="btn">➕ Novo usuário</a>
+      </div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 02 · Gestão de usuários e times aprovadores</a></p>
+
+      <div class="card" style="padding:0">
+        <table>
+          <thead><tr><th>Nome</th><th>E-mail</th><th>Perfil</th><th>Time aprovador</th><th></th></tr></thead>
+          <tbody>
+            <tr><td><strong>Pamela Otéro</strong></td><td>admin@empresa.com</td><td><span class="badge info">Admin</span></td><td>—</td><td class="row"><a href="#" class="small">editar</a></td></tr>
+            <tr><td>João Pereira</td><td>joao@empresa.com</td><td>Funcionário</td><td>Almoxarifado Central</td><td class="row"><a href="#" class="small">editar</a> · <a href="#" class="small" style="color:var(--danger)">remover</a></td></tr>
+            <tr><td>Marina Dias</td><td>marina@empresa.com</td><td>Funcionário</td><td>Engenharia de Obras</td><td class="row"><a href="#" class="small">editar</a> · <a href="#" class="small" style="color:var(--danger)">remover</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt16" style="max-width:520px">
+        <h3>Novo / editar usuário</h3>
+        <div class="field"><label>Nome</label><input placeholder="Nome completo"></div>
+        <div class="field"><label>E-mail</label><input placeholder="usuario@empresa.com"></div>
+        <div class="row">
+          <div class="grow field"><label>Perfil</label><select><option>Funcionário</option><option>Administrador</option></select></div>
+          <div class="grow field"><label>Time aprovador</label><select><option>Nenhum</option><option>Almoxarifado Central</option><option>Engenharia de Obras</option></select></div>
+        </div>
+        <div class="hint">O vínculo usuário → time define quem pode aprovar solicitações (RF07).</div>
+        <div class="row spread mt16"><a href="#" class="btn ghost">Cancelar</a><a href="#" class="btn">Salvar usuário</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF01 · Gestão de usuários e vínculo ao time</div>
+</body>
+</html>

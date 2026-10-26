@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Cadastro de Empresa (RF13)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="brand">ALMOX</div>
+    <p class="muted" style="text-align:center;margin-top:0">Cadastre sua empresa e crie o usuário administrador</p>
+    <p class="bpmn-ref" style="display:block;text-align:center">📐 <a href="../bpmns/" target="_blank">BPMN 01 · Cadastro de empresa e login</a></p>
+    <div class="field">
+      <label>Nome da empresa</label>
+      <input placeholder="Ex.: Construtora Alfa Ltda.">
+    </div>
+    <div class="field">
+      <label>CNPJ</label>
+      <input placeholder="00.000.000/0000-00">
+    </div>
+    <div class="row">
+      <div class="grow field"><label>CEP</label><input placeholder="30130-001"></div>
+      <div class="field" style="max-width:90px"><label>UF</label><input placeholder="MG" maxlength="2"></div>
+    </div>
+    <div class="row">
+      <div class="grow field"><label>Cidade</label><input placeholder="Belo Horizonte"></div>
+      <div class="grow field"><label>Bairro</label><input placeholder="Centro"></div>
+    </div>
+    <div class="row">
+      <div class="grow field"><label>Rua</label><input placeholder="Avenida Afonso Pena"></div>
+      <div class="field" style="max-width:110px"><label>Número</label><input placeholder="100"></div>
+    </div>
+    <div class="hint">Campos validados no envio: CNPJ, CEP (8 dígitos), UF (2 letras) e senha ≥ 8 caracteres (BPMN 01).</div>
+    <hr style="border:none;border-top:1px solid var(--line);margin:18px 0">
+    <p class="small muted mb0">Usuário administrador (criado automaticamente)</p>
+    <div class="field mt8">
+      <label>Nome do administrador</label>
+      <input placeholder="Seu nome">
+    </div>
+    <div class="field">
+      <label>E-mail</label>
+      <input placeholder="admin@empresa.com">
+    </div>
+    <div class="field">
+      <label>Senha</label>
+      <input type="password" placeholder="••••••••">
+      <div class="hint">Mínimo 8 caracteres. Será armazenada com hash (RNF05).</div>
+    </div>
+    <a href="login.html" class="btn" style="width:100%;justify-content:center">Criar empresa e administrador</a>
+    <p class="small" style="text-align:center;margin-top:14px">Já tem conta? <a href="login.html">Entrar</a></p>
+  </div>
+</div>
+<div class="rf-tag">RF13 · Cadastro de empresa + admin automático</div>
+</body>
+</html>

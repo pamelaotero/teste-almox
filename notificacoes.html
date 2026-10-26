@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Notificações (RF12)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="equipamentos.html">📦 Equipamentos</a>
+    <a href="solicitar.html">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html">📋 Minhas solicitações</a>
+    <a href="devolucoes.html">↩️ Devoluções</a>
+    <a href="historico.html">🕑 Histórico</a>
+    <a href="notificacoes.html" class="active">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html">✅ Aprovações</a>
+    <a href="categorias-times.html">🗂️ Categorias e times</a>
+    <a href="usuarios.html">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar...">
+      <div class="row center"><a href="notificacoes.html" style="font-size:18px">🔔</a><span class="badge info">Funcionário</span><div class="avatar">JP</div></div>
+    </header>
+    <div class="content" style="max-width:720px">
+      <div class="pagehead row spread"><div><h1>Notificações</h1><p>Status das solicitações e disponibilidade na fila (RF12)</p></div><a href="#" class="small">Marcar todas como lidas</a></div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 09 · Notificações</a></p>
+
+      <div class="card" style="border-left:4px solid var(--ok)">
+        <div class="row spread"><strong>✅ Solicitação aprovada</strong><span class="small muted">há 10 min</span></div>
+        <p class="small mb0">Sua solicitação de <strong>Capacete classe B</strong> foi aprovada. Você já pode confirmar a retirada.</p>
+      </div>
+      <div class="card mt8" style="border-left:4px solid var(--accent)">
+        <div class="row spread"><strong>📦 Item disponível na fila</strong><span class="small muted">há 1h</span></div>
+        <p class="small mb0">O <strong>Andaime tubular 1,5m</strong> que você aguardava está disponível. Sua vaga expira em 24h.</p>
+      </div>
+      <div class="card mt8" style="border-left:4px solid var(--danger)">
+        <div class="row spread"><strong>❌ Solicitação recusada</strong><span class="small muted">ontem</span></div>
+        <p class="small mb0">Sua solicitação de <strong>Andaime tubular</strong> foi recusada. Motivo: reservado para manutenção.</p>
+      </div>
+      <div class="card mt8" style="opacity:.6">
+        <div class="row spread"><strong>🕑 Devolução próxima do prazo</strong><span class="small muted">2 dias</span></div>
+        <p class="small mb0">Lembrete: a devolução do <strong>Kit Elétrica Básico</strong> vence amanhã.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF12 · Notificações de status / fila</div>
+</body>
+</html> 

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Histórico (RF10)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="equipamentos.html">📦 Equipamentos</a>
+    <a href="solicitar.html">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html">📋 Minhas solicitações</a>
+    <a href="devolucoes.html">↩️ Devoluções</a>
+    <a href="historico.html" class="active">🕑 Histórico</a>
+    <a href="notificacoes.html">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html">✅ Aprovações</a>
+    <a href="categorias-times.html">🗂️ Categorias e times</a>
+    <a href="usuarios.html">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar...">
+      <div class="row center"><a href="notificacoes.html" style="font-size:18px">🔔</a><span class="badge info">Administrador</span><div class="avatar">PO</div></div>
+    </header>
+    <div class="content">
+      <div class="pagehead"><h1>Histórico de movimentações</h1><p>Solicitações, retiradas e devoluções (RF10)</p></div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 08 · Histórico e Dashboard</a></p>
+
+      <div class="card" style="padding:14px">
+        <div class="row wrap center">
+          <input type="date" style="width:170px">
+          <input type="date" style="width:170px">
+          <select style="width:180px"><option>Todos os tipos</option><option>Solicitação</option><option>Retirada</option><option>Devolução</option></select>
+          <select style="width:180px"><option>Todos os funcionários</option><option>João Pereira</option><option>Marina Dias</option></select>
+          <a href="#" class="btn secondary sm">Exportar CSV</a>
+        </div>
+      </div>
+
+      <div class="card mt16" style="padding:0">
+        <table>
+          <thead><tr><th>Data/hora</th><th>Tipo</th><th>Item</th><th>Funcionário</th><th>Qtd</th><th>Detalhe</th></tr></thead>
+          <tbody>
+            <tr><td>17/10 14:32</td><td><span class="badge ok">Devolução</span></td><td>Kit Elétrica Básico</td><td>João Pereira</td><td>1</td><td><a href="#" class="small">ver</a></td></tr>
+            <tr><td>17/10 09:10</td><td><span class="badge info">Retirada</span></td><td>Capacete classe B</td><td>Marina Dias</td><td>1</td><td><a href="#" class="small">ver</a></td></tr>
+            <tr><td>16/10 16:45</td><td><span class="badge warn">Solicitação</span></td><td>Furadeira de impacto</td><td>João Pereira</td><td>2</td><td><a href="#" class="small">ver</a></td></tr>
+            <tr><td>16/10 11:02</td><td><span class="badge danger">Recusa</span></td><td>Andaime tubular</td><td>Marina Dias</td><td>1</td><td><a href="#" class="small">ver</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted mt16">Funcionários veem apenas o próprio histórico; admin vê o histórico geral e por equipamento (RF10 / RNF11).</p>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF10 · Histórico de solicitações, retiradas e devoluções</div>
+</body>
+</html>

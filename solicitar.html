@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Solicitar Retirada (RF05 / RF06)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="equipamentos.html">📦 Equipamentos</a>
+    <a href="solicitar.html" class="active">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html">📋 Minhas solicitações</a>
+    <a href="devolucoes.html">↩️ Devoluções</a>
+    <a href="historico.html">🕑 Histórico</a>
+    <a href="notificacoes.html">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html">✅ Aprovações</a>
+    <a href="categorias-times.html">🗂️ Categorias e times</a>
+    <a href="usuarios.html">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar...">
+      <div class="row center"><a href="notificacoes.html" style="font-size:18px">🔔</a><span class="badge info">Funcionário</span><div class="avatar">JP</div></div>
+    </header>
+    <div class="content">
+      <div class="pagehead"><h1>Nova solicitação</h1><p>Monte o carrinho com os itens disponíveis (1 a 100 itens). Itens sem estoque entram na fila de espera (RF05 / RF06)</p></div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 04 · Solicitação de retirada</a></p>
+
+      <div class="grid c2">
+        <!-- Catálogo (GET /equipment/stock → exibe itens com quantidade e status) -->
+        <div class="card">
+          <h3>1 · Selecione os itens</h3>
+          <p class="small muted">Catálogo com quantidade disponível e status (GET /api/v1/equipment/stock).</p>
+          <table>
+            <thead><tr><th>Item</th><th>Disp.</th><th>Qtd</th><th></th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Furadeira de impacto<div class="small muted">Ferramentas</div></td>
+                <td><span class="badge ok">8</span></td>
+                <td><input type="number" value="1" min="1" style="width:64px"></td>
+                <td><a href="#" class="btn sm">Adicionar</a></td>
+              </tr>
+              <tr>
+                <td>Capacete classe B<div class="small muted">EPI</div></td>
+                <td><span class="badge ok">15</span></td>
+                <td><input type="number" value="1" min="1" style="width:64px"></td>
+                <td><a href="#" class="btn sm">Adicionar</a></td>
+              </tr>
+              <tr>
+                <td>Andaime tubular 1,5m<div class="small muted">Andaimes</div></td>
+                <td><span class="badge danger">0</span></td>
+                <td><input type="number" value="1" min="1" style="width:64px" disabled></td>
+                <td><a href="#" class="btn sm secondary">Entrar na fila</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="card" style="box-shadow:none;background:var(--warn-bg);border-color:#e8d08a">
+            <p class="small mb0"><strong>⚠️ Item sem estoque:</strong> ao escolher "Entrar na fila", o item vai para a <strong>fila de espera</strong> e você é notificado quando houver disponibilidade (RF06 / RF12).</p>
+          </div>
+        </div>
+
+        <!-- Carrinho (adiciona 1 a 100 itens → revisa e confirma → POST /api/v1/request) -->
+        <div class="card">
+          <h3>2 · Carrinho</h3>
+          <p class="small muted">Revise os itens e confirme. Ao enviar, a solicitação é criada (POST /api/v1/requests) e dividida em sub-solicitações por categoria (RF07).</p>
+          <table>
+            <thead><tr><th>Item</th><th>Qtd</th><th>Categoria</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Furadeira de impacto</td><td>2</td><td>Ferramentas</td><td><a href="#" class="small">remover</a></td></tr>
+              <tr><td>Capacete classe B</td><td>1</td><td>EPI</td><td><a href="#" class="small">remover</a></td></tr>
+            </tbody>
+          </table>
+          <div class="field mt8"><label>Justificativa / obra</label><textarea rows="2" placeholder="Para qual obra ou finalidade..."></textarea></div>
+          <div class="field"><label>Devolução prevista</label><input type="date"></div>
+          <div class="row spread mt16">
+            <a href="equipamentos.html" class="btn ghost">Cancelar</a>
+            <a href="minhas-solicitacoes.html" class="btn">Revisar e enviar solicitação</a>
+          </div>
+          <p class="small muted mt8">2 itens no carrinho · sub-solicitações serão roteadas aos times aprovadores das categorias Ferramentas e EPI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF05 · Solicitação de retirada (carrinho) · RF06 · Fila de espera</div>
+</body>
+</html>

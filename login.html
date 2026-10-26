@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Login (RF01)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="brand">ALMOX</div>
+    <p class="muted" style="text-align:center;margin-top:0">Acesse sua conta</p>
+    <p class="bpmn-ref" style="display:block;text-align:center">📐 <a href="../bpmns/" target="_blank">BPMN 01 · Cadastro de empresa e login</a></p>
+
+    <div class="field">
+      <label>E-mail</label>
+      <input value="funcionario@empresa.com">
+    </div>
+    <div class="field">
+      <label>Senha</label>
+      <input type="password" value="senha-invalida">
+      <div class="err">E-mail ou senha incorretos. (estado de erro — mensagem genérica, sem vazar qual campo falhou)</div>
+    </div>
+    <div class="row spread" style="margin-bottom:14px">
+      <label class="small" style="display:flex;gap:6px;align-items:center;font-weight:400"><input type="checkbox" style="width:auto" checked> Manter conectado</label>
+      <a class="small" href="#">Esqueci a senha</a>
+    </div>
+    <a href="dashboard.html" class="btn" style="width:100%;justify-content:center">Entrar</a>
+    <p class="small" style="text-align:center;margin-top:14px">Nova empresa? <a href="cadastro-empresa.html">Cadastre-se</a></p>
+  </div>
+</div>
+<div class="rf-tag">RF01 · Autenticação (estado de erro)</div>
+</body>
+</html>

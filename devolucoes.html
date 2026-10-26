@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Devoluções (RF09)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="equipamentos.html">📦 Equipamentos</a>
+    <a href="solicitar.html">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html">📋 Minhas solicitações</a>
+    <a href="devolucoes.html" class="active">↩️ Devoluções</a>
+    <a href="historico.html">🕑 Histórico</a>
+    <a href="notificacoes.html">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html">✅ Aprovações</a>
+    <a href="categorias-times.html">🗂️ Categorias e times</a>
+    <a href="usuarios.html">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar...">
+      <div class="row center"><a href="notificacoes.html" style="font-size:18px">🔔</a><span class="badge info">Administrador</span><div class="avatar">PO</div></div>
+    </header>
+    <div class="content">
+      <div class="pagehead"><h1>Devoluções</h1><p>Confirmação de devolução pelo funcionário e validação do retorno ao estoque pelo admin/time (RF09)</p></div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 06 · Retirada e Devolução</a></p>
+
+      <div class="grid c2">
+        <div class="card">
+          <h3>1 · Funcionário confirma devolução</h3>
+          <div class="list-item card" style="box-shadow:none">
+            <div><strong>Kit Elétrica Básico</strong><div class="small muted">retirado há 2 dias · João Pereira</div></div>
+          </div>
+          <div class="field mt8"><label>Condição do item</label><select><option>Em boas condições</option><option>Com avaria</option><option>Incompleto</option></select></div>
+          <div class="field"><label>Observações</label><textarea rows="2" placeholder="Ex.: faltando 1 broca"></textarea></div>
+          <a href="#" class="btn" style="width:100%;justify-content:center">Confirmar devolução</a>
+        </div>
+
+        <div class="card">
+          <h3>2 · Admin valida retorno ao estoque</h3>
+          <p class="small muted">Devoluções aguardando validação. Só após validar, a quantidade volta ao estoque (RF09 / RNF06).</p>
+          <table>
+            <thead><tr><th>Item</th><th>Funcionário</th><th>Condição</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Kit Elétrica Básico</td><td>João Pereira</td><td><span class="badge warn">Com avaria</span></td><td><a href="#" class="btn sm">Validar</a></td></tr>
+              <tr><td>Furadeira</td><td>Marina Dias</td><td><span class="badge ok">OK</span></td><td><a href="#" class="btn sm">Validar</a></td></tr>
+            </tbody>
+          </table>
+          <div class="card mt8" style="box-shadow:none;background:var(--warn-bg);border-color:#e8d08a">
+            <p class="small mb0">Item com avaria: ao validar, escolha se ele <strong>retorna ao estoque</strong> ou vai para <strong>manutenção</strong> (não contabiliza como disponível).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF09 · Confirmação de devolução + validação do retorno</div>
+</body>
+</html>

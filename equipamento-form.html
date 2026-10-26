@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Cadastro de Equipamento (RF02)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="equipamentos.html" class="active">📦 Equipamentos</a>
+    <a href="solicitar.html">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html">📋 Minhas solicitações</a>
+    <a href="devolucoes.html">↩️ Devoluções</a>
+    <a href="historico.html">🕑 Histórico</a>
+    <a href="notificacoes.html">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html">✅ Aprovações</a>
+    <a href="categorias-times.html">🗂️ Categorias e times</a>
+    <a href="usuarios.html">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar...">
+      <div class="row center"><a href="notificacoes.html" style="font-size:18px">🔔</a><span class="badge info">Administrador</span><div class="avatar">PO</div></div>
+    </header>
+    <div class="content" style="max-width:760px">
+      <div class="pagehead">
+        <p class="small muted mb0"><a href="equipamentos.html">← Equipamentos</a></p>
+        <h1>Novo equipamento / kit</h1>
+        <p>Cadastro, edição e remoção de itens (RF02)</p>
+      </div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 03 · Catálogo e consulta de estoque</a></p>
+
+      <div class="card">
+        <div class="row">
+          <div class="grow field"><label>Tipo</label><select><option>Equipamento</option><option>Kit</option></select></div>
+          <div class="grow field"><label>Categoria</label><select><option>Selecione...</option><option>Ferramentas</option><option>Andaimes</option><option>EPIs</option></select></div>
+        </div>
+        <div class="field"><label>Nome do item</label><input placeholder="Ex.: Furadeira de impacto"></div>
+        <div class="row">
+          <div class="grow field"><label>Código / patrimônio</label><input placeholder="EQ-1042"></div>
+          <div class="grow field"><label>Quantidade em estoque</label><input type="number" value="0"><div class="err">Quantidade não pode ser negativa.</div></div>
+        </div>
+        <div class="field"><label>Descrição</label><textarea rows="3" placeholder="Especificações, observações de uso..."></textarea></div>
+        <div class="field"><label>Itens do kit (apenas para tipo Kit)</label>
+          <div class="card" style="box-shadow:none;background:#fafbfd">
+            <div class="row spread small"><span>Furadeira de impacto × 1</span><a href="#" style="color:var(--danger)">remover</a></div>
+            <div class="row spread small mt8"><span>Jogo de brocas × 1</span><a href="#" style="color:var(--danger)">remover</a></div>
+            <a href="#" class="btn sm ghost mt8">➕ Adicionar item ao kit</a>
+          </div>
+        </div>
+        <div class="row spread mt16">
+          <a href="equipamentos.html" class="btn ghost">Cancelar</a>
+          <div class="row">
+            <a href="#" class="btn danger">🗑️ Remover</a>
+            <a href="equipamentos.html" class="btn">💾 Salvar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF02 · Cadastro/edição/remoção de equipamentos e kits</div>
+</body>
+</html>

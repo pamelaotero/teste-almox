@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX — Protótipo navegável (Web + Mobile)</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="hub">
+  <h1>ALMOX — Protótipo navegável</h1>
+  <p class="muted">Wireframe de média-alta fidelidade cobrindo os requisitos funcionais RF01–RF13 nas versões <strong>Web</strong> e <strong>Mobile</strong>. Clique para navegar. A paleta é um placeholder — ajuste <code>assets/style.css</code> quando a identidade visual for aprovada.</p>
+
+  <div class="card mt16" style="background:#fbf1dc;border-color:#e8d08a">
+    <strong>⚠️ Protótipo / planejamento (Etapa 3).</strong> Estas telas representam o projeto de interface e o fluxo de navegação. Não são o sistema implementado — a evidência de implementação virá dos screenshots do app real em <code>src/frontend/</code>.
+  </div>
+
+  <h2 class="mt24">💻 Telas Web</h2>
+  <div class="screens">
+    <div class="screen-card"><div class="rf">RF13</div><h3>Cadastro de Empresa</h3><p class="muted small">Cria empresa + usuário admin.</p><div class="links"><a href="web/cadastro-empresa.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF01</div><h3>Login</h3><p class="muted small">Autenticação (admin / funcionário), com erro.</p><div class="links"><a href="web/login.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF11</div><h3>Dashboard</h3><p class="muted small">Movimentações e estoque; 5 KPIs.</p><div class="links"><a href="web/dashboard.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF04</div><h3>Equipamentos / Estoque</h3><p class="muted small">Listagem, busca, disponibilidade.</p><div class="links"><a href="web/equipamentos.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF02</div><h3>Cadastro de Equipamento</h3><p class="muted small">Criar/editar item ou kit + categoria.</p><div class="links"><a href="web/equipamento-form.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF03</div><h3>Categorias e Times Aprovadores</h3><p class="muted small">Gestão de categorias e times.</p><div class="links"><a href="web/categorias-times.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF01</div><h3>Usuários</h3><p class="muted small">Gestão de usuários e vínculo ao time.</p><div class="links"><a href="web/usuarios.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF05 · RF06</div><h3>Solicitar Retirada</h3><p class="muted small">Pedido + entrar na fila de espera.</p><div class="links"><a href="web/solicitar.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF07</div><h3>Aprovações</h3><p class="muted small">Pendências do time: aprovar/recusar.</p><div class="links"><a href="web/aprovacoes.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF08 · RF10</div><h3>Minhas Solicitações</h3><p class="muted small">Status, confirmar retirada, histórico.</p><div class="links"><a href="web/minhas-solicitacoes.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF09</div><h3>Devoluções</h3><p class="muted small">Confirmar devolução + validar retorno.</p><div class="links"><a href="web/devolucoes.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF10</div><h3>Histórico</h3><p class="muted small">Movimentações: filtros e detalhe.</p><div class="links"><a href="web/historico.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF12</div><h3>Notificações</h3><p class="muted small">Status da solicitação / fila liberada.</p><div class="links"><a href="web/notificacoes.html">Abrir →</a></div></div>
+  </div>
+
+  <h2 class="mt24">📱 Telas Mobile</h2>
+  <div class="screens">
+    <div class="screen-card"><div class="rf">RF01</div><h3>Login</h3><div class="links"><a href="mobile/login.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF11</div><h3>Home / Dashboard</h3><div class="links"><a href="mobile/home.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF04</div><h3>Catálogo / Estoque</h3><div class="links"><a href="mobile/equipamentos.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF05 · RF06</div><h3>Solicitar / Fila</h3><div class="links"><a href="mobile/solicitar.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF07</div><h3>Aprovações</h3><div class="links"><a href="mobile/aprovacoes.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF08 · RF09 · RF10</div><h3>Minhas Solicitações</h3><div class="links"><a href="mobile/minhas-solicitacoes.html">Abrir →</a></div></div>
+    <div class="screen-card"><div class="rf">RF12</div><h3>Notificações</h3><div class="links"><a href="mobile/notificacoes.html">Abrir →</a></div></div>
+  </div>
+
+  <h2 class="mt24">🔎 Rastreabilidade RF → Tela</h2>
+  <div class="card">
+    <table>
+      <thead><tr><th>RF</th><th>Descrição</th><th>Tela Web</th><th>Tela Mobile</th></tr></thead>
+      <tbody>
+        <tr><td>RF01</td><td>Login, autenticação e gestão de usuários</td><td>login · usuarios</td><td>login</td></tr>
+        <tr><td>RF02</td><td>Cadastro/edição/remoção de equipamentos e kits</td><td>equipamento-form</td><td>(via catálogo)</td></tr>
+        <tr><td>RF03</td><td>Gestão de categorias e times aprovadores</td><td>categorias-times</td><td>—</td></tr>
+        <tr><td>RF04</td><td>Consulta de estoque, listagem e pesquisa</td><td>equipamentos</td><td>equipamentos</td></tr>
+        <tr><td>RF05</td><td>Solicitação de retirada</td><td>solicitar</td><td>solicitar</td></tr>
+        <tr><td>RF06</td><td>Fila de espera</td><td>solicitar</td><td>solicitar</td></tr>
+        <tr><td>RF07</td><td>Aprovação/recusa por time aprovador</td><td>aprovacoes</td><td>aprovacoes</td></tr>
+        <tr><td>RF08</td><td>Confirmação de retirada pelo funcionário</td><td>minhas-solicitacoes</td><td>minhas-solicitacoes</td></tr>
+        <tr><td>RF09</td><td>Confirmação de devolução + validação</td><td>devolucoes</td><td>minhas-solicitacoes</td></tr>
+        <tr><td>RF10</td><td>Histórico de solicitações/retiradas/devoluções</td><td>historico</td><td>minhas-solicitacoes</td></tr>
+        <tr><td>RF11</td><td>Dashboard de movimentações e estoque</td><td>dashboard</td><td>home</td></tr>
+        <tr><td>RF12</td><td>Notificações de status / fila</td><td>notificacoes</td><td>notificacoes</td></tr>
+        <tr><td>RF13</td><td>Cadastro de empresa + admin automático</td><td>cadastro-empresa</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted small mt16">Protótipo gerado para a Etapa 3 do ALMOX · abra <code>index.html</code> no navegador para navegar.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Minhas Solicitações (RF08 / RF10)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="equipamentos.html">📦 Equipamentos</a>
+    <a href="solicitar.html">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html" class="active">📋 Minhas solicitações</a>
+    <a href="devolucoes.html">↩️ Devoluções</a>
+    <a href="historico.html">🕑 Histórico</a>
+    <a href="notificacoes.html">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html">✅ Aprovações</a>
+    <a href="categorias-times.html">🗂️ Categorias e times</a>
+    <a href="usuarios.html">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar...">
+      <div class="row center"><a href="notificacoes.html" style="font-size:18px">🔔</a><span class="badge info">Funcionário</span><div class="avatar">JP</div></div>
+    </header>
+    <div class="content">
+      <div class="pagehead"><h1>Minhas solicitações</h1><p>Acompanhe o status e confirme a retirada dos itens aprovados (RF08)</p></div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 06 · Retirada e Devolução</a></p>
+
+      <div class="card" style="padding:0">
+        <table>
+          <thead><tr><th>Item</th><th>Qtd</th><th>Enviada</th><th>Status</th><th>Ação</th></tr></thead>
+          <tbody>
+            <tr><td>Furadeira de impacto</td><td>2</td><td>há 2h</td><td><span class="badge warn">Pendente</span></td><td class="muted small">aguardando aprovação</td></tr>
+            <tr><td>Capacete classe B</td><td>1</td><td>ontem</td><td><span class="badge ok">Aprovada</span></td><td><a href="#" class="btn sm">Confirmar retirada</a></td></tr>
+            <tr><td>Kit Elétrica Básico</td><td>1</td><td>2 dias</td><td><span class="badge info">Retirado</span></td><td><a href="devolucoes.html" class="btn sm secondary">Devolver</a></td></tr>
+            <tr><td>Andaime tubular 1,5m</td><td>1</td><td>3 dias</td><td><span class="badge danger">Recusada</span></td><td class="muted small">ver motivo</td></tr>
+            <tr><td>Parafusadeira</td><td>1</td><td>4 dias</td><td><span class="badge info">Na fila (pos. 2)</span></td><td class="muted small">aguardando vaga</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card mt16" style="max-width:520px;background:var(--ok-bg);border-color:#bfe6d3">
+        <h3 style="color:var(--ok)">Confirmar retirada</h3>
+        <p class="small">Você confirma que retirou <strong>1× Capacete classe B</strong> no almoxarifado? Isso dá baixa no estoque (RF08).</p>
+        <div class="row spread mt8"><a href="#" class="btn ghost">Agora não</a><a href="#" class="btn">Confirmar retirada</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF08 · Confirmação de retirada · RF10 · Histórico</div>
+</body>
+</html>

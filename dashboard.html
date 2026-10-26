@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Dashboard (RF11)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html" class="active">📊 Dashboard</a>
+    <a href="equipamentos.html">📦 Equipamentos</a>
+    <a href="solicitar.html">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html">📋 Minhas solicitações</a>
+    <a href="devolucoes.html">↩️ Devoluções</a>
+    <a href="historico.html">🕑 Histórico</a>
+    <a href="notificacoes.html">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html">✅ Aprovações</a>
+    <a href="categorias-times.html">🗂️ Categorias e times</a>
+    <a href="usuarios.html">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar equipamento, solicitação...">
+      <div class="row center">
+        <a href="notificacoes.html" title="Notificações" style="font-size:18px">🔔</a>
+        <span class="badge info">Administrador</span>
+        <div class="avatar">PO</div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="pagehead">
+        <h1>Dashboard</h1>
+        <p>Visão geral de movimentações e estoque · Construtora Alfa</p>
+      </div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 08 · Histórico e Dashboard</a></p>
+
+      <div class="grid c4">
+        <div class="card kpi"><span class="lbl">Itens em estoque</span><span class="val">312</span><span class="small muted">disponíveis agora</span></div>
+        <div class="card kpi"><span class="lbl">Solicitações pendentes</span><span class="val">7</span><span class="small muted">aguardando aprovação</span></div>
+        <div class="card kpi"><span class="lbl">Itens em uso</span><span class="val">48</span><span class="small muted">retirados, não devolvidos</span></div>
+        <div class="card kpi"><span class="lbl">Em atraso</span><span class="val" style="color:var(--danger)">5</span><span class="small muted">devolução vencida</span></div>
+      </div>
+
+      <div class="grid c2 mt16">
+        <div class="card">
+          <h3>Movimentações (últimos 7 dias)</h3>
+          <div class="muted small">retiradas × devoluções</div>
+          <div style="height:180px;display:flex;align-items:flex-end;gap:10px;margin-top:16px">
+            <div style="flex:1;background:var(--accent);height:40%"></div>
+            <div style="flex:1;background:var(--accent);height:65%"></div>
+            <div style="flex:1;background:var(--accent);height:50%"></div>
+            <div style="flex:1;background:var(--accent);height:80%"></div>
+            <div style="flex:1;background:var(--accent);height:55%"></div>
+            <div style="flex:1;background:var(--accent);height:70%"></div>
+            <div style="flex:1;background:var(--accent);height:45%"></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Taxa de atendimento de solicitações</h3>
+          <div class="kpi mt8"><span class="val" style="color:var(--ok)">92%</span><span class="lbl">meta: ≥ 90%</span></div>
+          <hr style="border:none;border-top:1px solid var(--line);margin:14px 0">
+          <div class="row spread small"><span>Tempo médio de aprovação</span><strong>3h 12min</strong></div>
+          <div class="row spread small mt8"><span>Itens mais requisitados</span><strong>Furadeira, Andaime</strong></div>
+        </div>
+      </div>
+      <p class="small muted mt16">Os 5 indicadores (KPIs) desta tela são detalhados no documento de indicadores (RF11 / card E3-19).</p>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF11 · Dashboard de movimentações e estoque</div>
+</body>
+</html>

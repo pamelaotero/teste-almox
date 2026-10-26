@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALMOX Web · Categorias e Times Aprovadores (RF03)</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="web">
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">ALMOX</div>
+    <a href="dashboard.html">📊 Dashboard</a>
+    <a href="equipamentos.html">📦 Equipamentos</a>
+    <a href="solicitar.html">➕ Solicitar</a>
+    <a href="minhas-solicitacoes.html">📋 Minhas solicitações</a>
+    <a href="devolucoes.html">↩️ Devoluções</a>
+    <a href="historico.html">🕑 Histórico</a>
+    <a href="notificacoes.html">🔔 Notificações</a>
+    <div class="group">Administração</div>
+    <a href="aprovacoes.html">✅ Aprovações</a>
+    <a href="categorias-times.html" class="active">🗂️ Categorias e times</a>
+    <a href="usuarios.html">👥 Usuários</a>
+  </nav>
+  <div class="main">
+    <header class="topbar">
+      <input class="search" placeholder="🔎 Buscar...">
+      <div class="row center"><a href="notificacoes.html" style="font-size:18px">🔔</a><span class="badge info">Administrador</span><div class="avatar">PO</div></div>
+    </header>
+    <div class="content">
+      <div class="pagehead"><h1>Categorias e Times Aprovadores</h1><p>Gestão de categorias de material e dos times que aprovam solicitações (RF03)</p></div>
+      <p class="bpmn-ref">📐 Fluxo de negócio: <a href="../bpmns/" target="_blank">BPMN 02 · Gestão de usuários e times</a> · <a href="../bpmns/" target="_blank">BPMN 03 · Catálogo</a></p>
+
+      <div class="grid c2">
+        <div class="card" style="padding:0">
+          <div class="row spread" style="padding:14px 16px"><h3 class="mb0">Categorias</h3><a href="#" class="btn sm">➕ Nova</a></div>
+          <table>
+            <thead><tr><th>Categoria</th><th>Time aprovador</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Ferramentas</td><td>Almoxarifado Central</td><td><a href="#" class="small">editar</a></td></tr>
+              <tr><td>Andaimes</td><td>Engenharia de Obras</td><td><a href="#" class="small">editar</a></td></tr>
+              <tr><td>EPIs</td><td>Segurança do Trabalho</td><td><a href="#" class="small">editar</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card" style="padding:0">
+          <div class="row spread" style="padding:14px 16px"><h3 class="mb0">Times aprovadores</h3><a href="#" class="btn sm">➕ Novo</a></div>
+          <table>
+            <thead><tr><th>Time</th><th>Membros</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Almoxarifado Central</td><td>3 aprovadores</td><td><a href="#" class="small">editar</a></td></tr>
+              <tr><td>Engenharia de Obras</td><td>2 aprovadores</td><td><a href="#" class="small">editar</a></td></tr>
+              <tr><td>Segurança do Trabalho</td><td>1 aprovador</td><td><a href="#" class="small">editar</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p class="small muted mt16">O roteamento de uma solicitação (RF07) usa a <strong>categoria do item → time aprovador</strong> definido aqui.</p>
+    </div>
+  </div>
+</div>
+<div class="rf-tag">RF03 · Gestão de categorias e times aprovadores</div>
+</body>
+</html>
