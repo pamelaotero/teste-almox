@@ -171,3 +171,163 @@ tr:hover td { background: #fafbfd; }
   color: var(--primary);
 }
 .bpmn-ref a { color: var(--primary); font-weight: 600; }
+
+/* =========================================================================
+   VERSÃO MOBILE (celular) — comportamento de app
+   Em até 768px a interface deixa de ser "site" e vira app:
+   barra superior (título + voltar + notificações), abas fixas embaixo,
+   folha "Mais" com o restante do menu, listas em cards e botão flutuante (+).
+   Os elementos .m-* são injetados por assets/responsive.js.
+   ========================================================================= */
+
+img, video, svg { max-width: 100%; height: auto; }
+.web .main { min-width: 0; }
+
+/* Elementos de app ficam ocultos no desktop */
+.m-appbar, .m-tabbar, .m-sheet, .m-sheet-bg, .m-fab, .m-list, .m-search { display: none; }
+
+@media (max-width: 768px) {
+  body.web { background: var(--bg); -webkit-tap-highlight-color: transparent; }
+  .web .shell { display: block; min-height: 100vh; }
+
+  /* Some o que é de desktop */
+  .web .sidebar, .web .topbar, .bpmn-ref, .rf-tag,
+  .web .pagehead h1, .web .pagehead > .btn, .web .pagehead > div > .btn { display: none !important; }
+
+  /* ---- Barra superior do app ---- */
+  .m-appbar {
+    display: flex; align-items: center; gap: 8px;
+    position: sticky; top: 0; z-index: 60;
+    min-height: 54px; padding: 8px 12px; padding-top: calc(8px + env(safe-area-inset-top));
+    background: var(--primary); color: #fff;
+  }
+  .m-appbar .m-title { flex: 1; font-size: 18px; font-weight: 700; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .m-appbar .m-btn {
+    position: relative; display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 50%; font-size: 20px; color: #fff; background: transparent; border: 0; padding: 0;
+  }
+  .m-appbar .m-btn:active { background: rgba(255,255,255,.18); }
+  .m-appbar .m-dot { position: absolute; top: 8px; right: 8px; width: 9px; height: 9px; border-radius: 50%; background: #ff5d5d; border: 2px solid var(--primary); }
+  .m-appbar .m-avatar { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+
+  /* ---- Conteúdo ---- */
+  .web .content { padding: 14px 14px calc(88px + env(safe-area-inset-bottom)); max-width: 100% !important; }
+  .web .pagehead { margin-bottom: 12px; }
+  .web .pagehead p { display: none; }
+  .web .pagehead:not(:has(> a:not(.btn))) { display: none; }
+  .web .pagehead.row { flex-wrap: nowrap; }
+  .card { padding: 14px; border-radius: 14px; }
+  .card.mt16, .mt16 { margin-top: 12px; }
+  .card[style*="max-width"] { max-width: 100% !important; }
+  .card h3 { font-size: 16px; }
+  .web .grid, .web .grid.c4, .web .grid.c3, .web .grid.c2 { grid-template-columns: 1fr; gap: 12px; }
+  /* KPIs em 2 colunas, como painel de app */
+  .web .grid.c4 { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .web .grid.c4 .card { padding: 12px; }
+  .kpi .val { font-size: 24px; }
+  .kpi .lbl { font-size: 12px; }
+
+  /* ---- Formulários e filtros ---- */
+  input, select, textarea { font-size: 16px; padding: 12px; border-radius: 10px; }
+  input[type="checkbox"], input[type="radio"] { width: auto; }
+  .row { flex-wrap: wrap; }
+  .row > .grow, .field[style*="max-width"] { flex: 1 1 100%; max-width: none !important; }
+  .btn { min-height: 44px; padding: 11px 16px; border-radius: 10px; justify-content: center; }
+  .btn.sm { min-height: 38px; padding: 8px 12px; font-size: 13px; }
+  .row.spread > .btn, .row.spread > a.btn { flex: 1 1 auto; }
+  .row.spread > .btn.sm { flex: 0 0 auto; }
+  body:has(> .m-fab) .content { padding-bottom: calc(150px + env(safe-area-inset-bottom)); }
+
+  /* ---- Tabelas viram lista nativa (gerada em responsive.js) ---- */
+  table { display: none !important; }
+  .m-list { display: block; }
+  .card:has(> .m-list) { padding: 0; overflow: hidden; }
+  .card:has(> .m-list) > h3, .card:has(> .m-list) > p { padding: 0 14px; }
+  .card:has(> .m-list) > h3 { padding-top: 14px; }
+  .card:has(> .m-list) > .card { margin: 0 14px 14px; }
+  .card:has(> .m-list) > .field { padding: 0 14px; }
+  .card:has(> .m-list) > .row.spread, .card:has(> .m-list) > p.small { padding: 0 14px 14px; }
+  .m-item { padding: 12px 14px; border-bottom: 1px solid var(--line); background: #fff; }
+  .m-item:last-child { border-bottom: 0; }
+  .m-item:active { background: #f1f4f9; }
+  .m-item-top { display: flex; align-items: center; gap: 10px; }
+  .m-main { flex: 1; min-width: 0; }
+  .m-item-title { font-size: 15px; font-weight: 600; line-height: 1.3; }
+  .m-item-title .small { font-weight: 400; }
+  .m-item-sub { font-size: 13px; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .m-side { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex: 0 0 auto; }
+  .m-link { font-size: 14px; font-weight: 600; padding: 4px 0; }
+  .m-actions { display: flex; gap: 8px; margin-top: 10px; align-items: center; }
+  .m-actions:empty { display: none; }
+  .m-actions .btn { flex: 1; min-height: 40px; }
+  .m-actions > .btn:only-child { flex: 0 0 auto; margin-left: auto; min-width: 120px; }
+  .m-actions input[type="number"] { width: 76px !important; flex: 0 0 76px; padding: 9px; text-align: center; }
+
+  /* ---- Filtros: busca em cima, selects como chips roláveis ---- */
+  .card:has(> .m-filters) { padding: 0; background: transparent; border: 0; box-shadow: none; }
+  .web .m-filters { flex-wrap: nowrap; overflow-x: auto; gap: 8px; padding-bottom: 2px; scrollbar-width: none; }
+  .web .m-filters::-webkit-scrollbar { display: none; }
+  .web .m-filters > input:not([type="date"]) { display: none; }
+  .web .m-filters > select, .web .m-filters > input[type="date"] {
+    flex: 0 0 auto; width: auto !important; min-width: 0;
+    padding: 8px 30px 8px 14px; font-size: 14px; border-radius: 999px; background-color: #fff;
+  }
+  .web .m-filters > .btn { flex: 0 0 auto; min-height: 38px; border-radius: 999px; }
+  .m-search { display: block; margin-bottom: 10px; }
+  .m-search input { border-radius: 12px; background: #fff; }
+
+  /* ---- Botão flutuante (ação principal da tela) ---- */
+  .m-fab {
+    display: flex; align-items: center; justify-content: center;
+    position: fixed; right: 16px; bottom: calc(76px + env(safe-area-inset-bottom)); z-index: 70;
+    width: 56px; height: 56px; border-radius: 50%; background: var(--accent); color: #fff;
+    font-size: 28px; line-height: 1; box-shadow: 0 6px 16px rgba(47,128,237,.5);
+  }
+  .m-fab:hover { text-decoration: none; }
+
+  /* ---- Abas inferiores ---- */
+  .m-tabbar {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 80;
+    background: #fff; border-top: 1px solid var(--line);
+    padding-bottom: env(safe-area-inset-bottom); box-shadow: 0 -2px 10px rgba(16,24,40,.06);
+  }
+  .m-tabbar a, .m-tabbar button {
+    flex: 1; min-width: 0; text-align: center; padding: 8px 2px 9px; font-size: 11px; color: var(--muted);
+    background: none; border: 0; font-family: inherit; cursor: pointer; text-decoration: none;
+  }
+  .m-tabbar .ic { display: block; font-size: 21px; line-height: 1.2; margin-bottom: 1px; }
+  .m-tabbar .active { color: var(--accent); font-weight: 700; }
+
+  /* ---- Folha "Mais" ---- */
+  .m-sheet-bg { display: block; position: fixed; inset: 0; z-index: 90; background: rgba(15,23,42,.5); opacity: 0; pointer-events: none; transition: opacity .2s; }
+  .m-sheet {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 100;
+    max-height: 80vh; overflow-y: auto; background: #fff;
+    border-radius: 18px 18px 0 0; padding: 8px 16px calc(16px + env(safe-area-inset-bottom));
+    transform: translateY(100%); transition: transform .25s ease;
+  }
+  .m-sheet .grip { width: 40px; height: 4px; background: var(--line); border-radius: 4px; margin: 4px auto 12px; }
+  .m-sheet .grp { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 14px 4px 6px; }
+  .m-sheet a { display: flex; align-items: center; gap: 12px; padding: 14px 8px; font-size: 16px; color: var(--text); border-bottom: 1px solid var(--line); }
+  .m-sheet a:last-child { border-bottom: 0; }
+  .m-sheet a.active { color: var(--accent); font-weight: 700; }
+  .m-sheet a.danger { color: var(--danger); }
+  .web.sheet-open .m-sheet-bg { opacity: 1; pointer-events: auto; }
+  .web.sheet-open .m-sheet { transform: translateY(0); }
+  .web.sheet-open { overflow: hidden; }
+
+  /* ---- Telas públicas (login/cadastro) ---- */
+  .auth-wrap { padding: 0; align-items: stretch; background: var(--card); }
+  .auth-card { max-width: none; border-radius: 0; box-shadow: none; padding: 32px 20px calc(24px + env(safe-area-inset-bottom)); }
+
+  /* ---- Hub (index) ---- */
+  .hub { padding: 16px 14px 32px; }
+  .hub h1 { font-size: 22px; }
+  .hub .screens { grid-template-columns: 1fr; }
+  .hub .tablist { display: flex; flex-wrap: wrap; border-radius: 12px; }
+
+  /* Moldura de celular: tela cheia no aparelho real */
+  .mobile { padding: 0; background: var(--bg); }
+  .phone { width: 100%; height: 100vh; height: 100dvh; border: 0; border-radius: 0; box-shadow: none; }
+  .phone .notch { display: none; }
+}
